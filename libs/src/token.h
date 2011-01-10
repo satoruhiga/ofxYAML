@@ -8,6 +8,7 @@
 #include <ios>
 #include <string>
 #include <vector>
+#include <iostream>
 
 namespace YAML
 {

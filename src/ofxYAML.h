@@ -13,14 +13,14 @@ public:
 };
 
 
-void operator>>(const YAML::Node &node, ofPoint &p)
+inline void operator>>(const YAML::Node &node, ofPoint &p)
 {
 	node[0] >> p.x;
 	node[1] >> p.y;
 	node[2] >> p.z;
 }
 
-void operator>>(const YAML::Node &node, ofRectangle &p)
+inline void operator>>(const YAML::Node &node, ofRectangle &p)
 {
 	node[0] >> p.x;
 	node[1] >> p.y;
@@ -28,7 +28,7 @@ void operator>>(const YAML::Node &node, ofRectangle &p)
 	node[3] >> p.height;
 }
 
-void operator>>(const YAML::Node &node, ofColor &p)
+inline void operator>>(const YAML::Node &node, ofColor &p)
 {
 	node[0] >> p.r;
 	node[1] >> p.g;
