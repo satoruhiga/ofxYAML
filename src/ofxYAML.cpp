@@ -11,3 +11,14 @@ bool ofxYAML::load(string path)
 	
 	return true;
 }
+
+bool ofxYAML::parse(string str)
+{
+	stringstream ss;
+	ss << str;
+    YAML::Parser parser(ss);
+	
+	parser.GetNextDocument(doc);
+	
+	return true;
+}

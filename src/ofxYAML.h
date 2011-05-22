@@ -11,6 +11,8 @@ public:
 	YAML::Node doc;
 
 	bool load(string path);
+	bool parse(string str);
+	
 };
 
 
