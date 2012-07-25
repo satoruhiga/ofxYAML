@@ -19,10 +19,7 @@ void testApp::parseYAML(){
     yaml.doc["size1"] >> size1;
     yaml.doc["size2"] >> size2;
     
-    // BUG!
-    // ofColors do not de-serialize correctly,
-    // they take only the first digit.
-    cout << "r: " << theColor.r << " g: " << theColor.g << " b: " << theColor.b << endl; 
+    cout << dec << "r: " << (int)theColor.r << " g: " << (int)theColor.g << " b: " << (int)theColor.b << endl; 
     cout << "p1.x: " << point1.x << " p1.y: " << point1.y << endl;
     
     result = s.str();

@@ -47,16 +47,18 @@ inline void operator << (YAML::Emitter & out, ofRectangle & p)
 
 inline void operator >> (const YAML::Node & node, ofColor & p)
 {
-	node[0] >> p.r;
-	node[1] >> p.g;
-	node[2] >> p.b;
-	node[3] >> p.a;
+	int r, g, b, a;
+	node[0] >> r;
+	node[1] >> g;
+	node[2] >> b;
+	node[3] >> a;
+	p.set(r, g, b, a);
 }
 
 inline void operator << (YAML::Emitter & out, ofColor & p)
 {
 	out << YAML::Flow << YAML::BeginSeq;
-	out << p.r << p.g << p.b << p.a;
+	out << (int)p.r << (int)p.g << (int)p.b << (int)p.a;
 	out << YAML::EndSeq;
 }
 
